@@ -1,0 +1,17 @@
+/dts-v1/;
+/plugin/;
+
+/ {
+    compatible = "linux,virtual-sensor";
+
+    fragment@0 {
+        target-path = "/";
+        __overlay__ {
+            virt_sensor@0 {
+                compatible = "virt,sensor";
+                status = "okay";
+                mode = <1>;
+            };
+        };
+    };
+};
